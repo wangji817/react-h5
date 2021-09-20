@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <style>
+    .grid-load {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      height: 100%;
+      width: 100%
+    }
+
+    .grid-load .grid {
+      background: #fafafa;
+      margin: 10px 10px;
+      opacity: 0.3;
+    }
+
+    .grid-load .grid-long {
+      height: 60px
+    }
+
+    .grid-load .grid-small {
+      height: 20px
+    }
+
+    .grid-load .grid-smallest {
+      height: 10px
+    }
+
+    .grid-load .w90 {
+      width: 90%
+    }
+
+    .grid-load .w70 {
+      width: 70%
+    }
+
+    .grid-load .w50 {
+      width: 50%
+    }
+
+    .grid-load .w20 {
+      width: 20%
+    }
+
+    .grid-load .w10 {
+      width: 10%
+    }
+  </style>
+  <style>        
+    body {
+      margin: 0;
+      font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif
+    }
+
+    a,
+    abbr,
+    acronym,
+    address,
+    applet,
+    article,
+    aside,
+    audio,
+    b,
+    big,
+    blockquote,
+    body,
+    canvas,
+    caption,
+    center,
+    cite,
+    code,
+    dd,
+    del,
+    details,
+    dfn,
+    div,
+    dl,
+    dt,
+    em,
+    embed,
+    fieldset,
+    figcaption,
+    figure,
+    footer,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    header,
+    html,
+    i,
+    iframe,
+    img,
+    ins,
+    kbd,
+    label,
+    legend,
+    li,
+    mark,
+    menu,
+    nav,
+    object,
+    ol,
+    output,
+    p,
+    pre,
+    q,
+    ruby,
+    s,
+    samp,
+    section,
+    small,
+    span,
+    strike,
+    sub,
+    summary,
+    sup,
+    table,
+    tbody,
+    td,
+    tfoot,
+    th,
+    thead,
+    time,
+    tr,
+    tt,
+    u,
+    ul,
+    var,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font: inherit;
+      font-size: 100%;
+      vertical-align: middle;
+      font-family: San Francisco, Helvetica, Roboto, Arial, PingFang SC, Hiragino Sans GB, Heiti SC, Microsoft YaHei, sans-serif
+    }
+
+    a {
+      text-decoration: none
+    }
+
+    @-webkit-keyframes fadeIn {
+      0% {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .fadeIn {
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn
+    }
+
+    .animated {
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both
+    }    
+  </style>    
+  <link rel="apple-touch-icon" href="./static/images/reacth5.ico" keeplive="true"/>
+  <link rel="shortcut icon" href="./static/images/reacth5.ico" keeplive="true"/>
+  <link rel="Bookmark" href="./static/images/reacth5.ico" keeplive="true"/>  
+</head>
+
+<body class="vbody">
+  <div id="wrapper">
+    <div class="grid-load">
+      <div class="grid grid-long"></div>
+      <div class="grid grid-small"></div>
+      <div class="grid grid-smallest"></div>
+      <div class="grid grid-smallest w20"></div>
+      <div class="grid grid-smallest w50"></div>
+      <div class="grid grid-smallest w70"></div>
+      <div class="grid grid-smallest w20"></div>
+      <div class="grid grid-smallest w70"></div>
+      <div class="grid grid-smallest w50"></div>
+      <div class="grid grid-smallest w10"></div>
+      <div class="grid grid-smallest"></div>
+      <div class="grid grid-smallest w70"></div>
+      <div class="grid grid-smallest w50"></div>
+      <div class="grid grid-smallest w20"></div>
+      <div class="grid grid-smallest w70"></div>
+      <div class="grid grid-smallest w50"></div>
+      <div class="grid grid-smallest w20"></div>
+      <div class="grid grid-smallest w10"></div>
+      <div class="grid grid-smallest"></div>
+      <div class="grid grid-smallest w20"></div>
+      <div class="grid grid-smallest w50"></div>
+      <div class="grid grid-smallest w70"></div>
+      <div class="grid grid-smallest w20"></div>
+      <div class="grid grid-smallest w70"></div>
+      <div class="grid grid-smallest w50"></div>
+      <div class="grid grid-smallest w10"></div>
+    </div>
+  </div>
+</body>
+
+</html>
