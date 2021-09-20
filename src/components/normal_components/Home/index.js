@@ -15,15 +15,19 @@ import './index.scss';
 // import { YourPlugin } from '@normalCom';
 
 class Home extends Component {
-    state = {
-        text:`新组件Home,开发后请删除示例文案`
+    constructor(props) {
+        super(props);
+        this.currRef = React.createRef();
+        this.currDiv = React.createRef();
     }
-    currRef = React.createRef();
+    state = {
+        text: `新组件Home,开发后请删除示例文案`
+    }
     render() {
-        let {text} = this.state;
+        let { text } = this.state;
         return (
-            <div className="Home" ref={console.log(this.currRef.current)}>
-                {text}
+            <div className="Home" ref={this.currRef}>
+                <div ref={this.currDiv} onClick={()=> console.log(this.currRef.current,this.currDiv.current)}>点我</div>
             </div>
         );
     }

@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
 }
+
 a,
 abbr,
 acronym,
@@ -90,29 +91,56 @@ video {
     font-family: "San Francisco", Helvetica, Roboto, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC",
         "Microsoft YaHei", sans-serif;
 }
+
 a {
     text-decoration: none;
 }
+
+html {
+    font-size: 15px!important;
+}
+
+@media only screen and (max-width: 1024px) {
+    html {
+        font-size: 15px!important;
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width:1920px) {
+    html {
+        font-size: 28.125px!important;
+    }
+}
+@media only screen and (min-width: 1921px) and (max-width: 2560px) {
+    html {
+        font-size: 37.5px!important;
+    }
+}
+
 @-webkit-keyframes fadeIn {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
+
 .fadeIn {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
 }
+
 .animated {
     -webkit-animation-duration: 0.5s;
     animation-duration: 0.5s;

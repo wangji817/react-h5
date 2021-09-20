@@ -15,7 +15,7 @@ class Index extends Component {
 
     }
     render() {
-        const { ...restProps } = this.props;
+        const { ...restProps } = this.props;        
         return (
             <div className="Index" >
                 <Home {...restProps} />

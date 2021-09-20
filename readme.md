@@ -74,7 +74,9 @@ npm run updateEntry
 ```
 
 ### rem说明
-
+`
+根据业务需求设定，如1024下15px=1rem的，则设定1024px的scree宽度下html的font-size:15px;
+`
 
 ### 开发流程
 
