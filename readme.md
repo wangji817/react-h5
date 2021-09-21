@@ -96,12 +96,12 @@ npm run updateEntry
 
 ### 相关组件和模块
 
-* antd和antd-mobile相关组件
+* antd-mobile相关组件
 
-本脚手架支持antd或antd-mobile，可直接引入使用
+本脚手架支持antd-mobile，可直接引入使用
 
 ```
-import { Button, Toast } from 'antd';
+import { Button, Toast } from 'antd-mobile';
 ```
 封装了axios请求模块
 
