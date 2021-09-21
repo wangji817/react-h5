@@ -1,8 +1,8 @@
 /**
- * XXXXXX
+ * Alert
  * @author 此处修改作者名
  * @property {object} data 
- * @example <XXXXXX data={object}/>
+ * @example <Alert data={object}/>
  */
 import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
@@ -14,19 +14,19 @@ import './index.scss';
 // import { YourUiPlugin } from '@uiCom';
 // import { YourNormalPlugin } from '@normalCom';
 
-class XXXXXX extends Component {
+class Alert extends Component {
     state = {
-        text:`新组件XXXXXX,开发后请删除示例文案`
+        text:`新组件Alert,开发后请删除示例文案`
     }
     currRef = React.createRef();
     render() {
         let {text} = this.state;
         return (
-            <div className="XXXXXX" ref={console.log(this.currRef.current)}>
+            <div className="Alert" ref={console.log(this.currRef.current)}>
                 {text}
             </div>
         );
     }
 }
 
-export default XXXXXX;
+export default Alert;
