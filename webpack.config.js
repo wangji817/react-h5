@@ -69,7 +69,7 @@ const config = {
                                 "libraryDirectory": "es",
                                 "style": "css"
                             }
-                        ],
+                        ]
                     ]
                 }
 
