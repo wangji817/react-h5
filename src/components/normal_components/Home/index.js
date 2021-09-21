@@ -20,8 +20,8 @@ import pageList from '../../../../config/pageList.js';
 class Home extends Component {
     constructor(props) {
         super(props);
-        this.currRef = React.createRef();
     }
+    currRef = React.createRef();
     state = {
     }
     componentDidMount() {
@@ -29,7 +29,7 @@ class Home extends Component {
     }
 
     render() {
-        console.log(pageLists);
+        console.log(pageList);
         return (
             <div className="Home" ref={this.currRef}>
                 <Button type="primary" onClick={() => { console.log(this.currRef.current) }}>点我</Button>
