@@ -15,14 +15,21 @@ import './index.scss';
 // import { YourNormalPlugin } from '@normalCom';
 
 class Alert extends Component {
+    constructor(props){
+        super(props);
+    }
+    currRef = React.createRef();
     state = {
         text:`新组件Alert,开发后请删除示例文案`
     }
-    currRef = React.createRef();
+    componentDidMount() {
+        console.log(this.currRef.current);
+    }
+    
     render() {
         let {text} = this.state;
         return (
-            <div className="Alert" ref={console.log(this.currRef.current)}>
+            <div className="Alert" ref={this.currRef}>
                 {text}
             </div>
         );

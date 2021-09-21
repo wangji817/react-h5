@@ -15,6 +15,9 @@ import './index.scss';
 // import { YourNormalPlugin } from '@normalCom';
 
 class XXXXXX extends Component {
+    constructor(props){
+        super(props);
+    }
     state = {
         text:`新组件XXXXXX,开发后请删除示例文案`
     }
@@ -22,7 +25,7 @@ class XXXXXX extends Component {
     render() {
         let {text} = this.state;
         return (
-            <div className="XXXXXX" ref={console.log(this.currRef.current)}>
+            <div className="XXXXXX" ref={this.currRef}>
                 {text}
             </div>
         );
