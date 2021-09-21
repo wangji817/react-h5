@@ -10,10 +10,6 @@ import './index.scss';
 
 //import { vtools } from '@util'; /**公共方法 */
 
-// import { Vlink, Vimg } from '@baseCom';
-// import { Vheader } from '@uiCom';
-// import { YourPlugin } from '@normalCom';
-
 class TestCom extends Component {
     state = {
         text:`新组件TestCom,开发后请删除示例文案`
