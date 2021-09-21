@@ -112,17 +112,18 @@ const config = {
 };
 if (isDev) {
     console.log('is dev');
-    config.devtool = '#cheap-module-eval-source-map',
-        config.devServer = {
-            port: 8000,
-            host: '0.0.0.0',
-            useLocalIp: true,
-            overlay: {
-                errors: true
-            },
-            open: true,  //每次都打开一个网页
-            hot: true //只渲染一个组件
-        }
+    config.devtool = '#cheap-module-eval-source-map';
+    config.devServer = {
+        port: 8000,
+        host: '0.0.0.0',
+        useLocalIp: true,
+        overlay: {
+            warnings: true,
+            errors: true
+        },
+        open: true,  //每次都打开一个网页
+        hot: true //只渲染一个组件
+    };
     config.plugins.push(
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),

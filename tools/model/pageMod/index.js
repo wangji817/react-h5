@@ -9,6 +9,7 @@ import './index.scss';
 //import { vtools } from '@util'; /**公共方法 */
 
 import { YourPlugin } from '@normalCom'; /**需手动修改引用对应组件 */
+import { CatchError } from '@baseCom'; /**需手动修改引用对应组件 */
 
 class XXXXXX extends Component {
     state = {
@@ -18,7 +19,9 @@ class XXXXXX extends Component {
         const { ...restProps } = this.props;
         return (
             <div className="XXXXXX" >
-                <YourPlugin {...restProps} />
+                <CatchError>
+                    <YourPlugin {...restProps} />
+                </CatchError>
             </div>
         );
     }

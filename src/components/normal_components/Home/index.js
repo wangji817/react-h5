@@ -29,6 +29,7 @@ class Home extends Component {
     }
 
     render() {
+        console.log(pageLists);
         return (
             <div className="Home" ref={this.currRef}>
                 <Button type="primary" onClick={() => { console.log(this.currRef.current) }}>点我</Button>

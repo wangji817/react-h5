@@ -9,16 +9,19 @@ import './index.scss';
 //import { vtools } from '@util'; /**公共方法 */
 
 import { Home } from '@normalCom'; /**需手动修改引用对应组件 */
+import { CatchError } from '@baseCom'; /**需手动修改引用对应组件 */
 
 class Index extends Component {
     state = {
 
     }
     render() {
-        const { ...restProps } = this.props;        
+        const { ...restProps } = this.props;
         return (
             <div className="Index" >
-                <Home {...restProps} />
+                <CatchError>
+                    <Home {...restProps} />
+                </CatchError>
             </div>
         );
     }
