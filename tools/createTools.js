@@ -213,7 +213,7 @@ const createJson = (pageName) => {
     console.log('本地json文件：', pageName);
     if (!!pageName) {
         let targetPath;
-        targetPath = path.join(__dirname, "../public/json");
+        targetPath = path.join(__dirname, "../static/json");
         const jsonPath = `${targetPath}/${pageName}.json`;
         const modPath = path.join(__dirname, "/model/jsonMod");
         let jsonStr = fs.readFileSync(`${modPath}/index.json`, 'utf-8');

@@ -8,7 +8,8 @@ import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 import './index.scss';
 
-//import { vtools } from '@util'; /**公共方法 */
+// import { vtools } from '@util'; /**公共方法 */
+import { getData } from '@api/getHome'; /**api */
 
 // import { Vlink, Vimg } from '@baseCom';
 // import { Vheader } from '@uiCom';
@@ -23,11 +24,15 @@ class Home extends Component {
     state = {
         text: `新组件Home,开发后请删除示例文案`
     }
+    componentDidMount() {
+        getData().then((data) => console.log(data));
+    }
+
     render() {
         let { text } = this.state;
         return (
             <div className="Home" ref={this.currRef}>
-                <div ref={this.currDiv} onClick={()=> console.log(this.currRef.current,this.currDiv.current)}>点我</div>
+                <div ref={this.currDiv} onClick={() => console.log(this.currRef.current, this.currDiv.current)}>点我</div>
             </div>
         );
     }

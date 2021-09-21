@@ -10,6 +10,7 @@
     "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js --inline",
     "add:plugin": "node tools/createPlugin",
     "add:page": "node tools/createPage",
+    "add:json": "node tools/createJson",
     "updateEntry": "node tools/updateEntry"
   },
   "author": "Night",
