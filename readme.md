@@ -36,6 +36,13 @@ npm run add:page
 
 后根据提示操作
 
+### 创建本地json文件(访问路径/static/json/queryHome.json)
+
+```
+npm run add:json
+```
+
+后根据提示操作
 
 ### 打包发布
 
