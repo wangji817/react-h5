@@ -11,7 +11,7 @@ import './index.scss';
 // import { vtools } from '@util'; /**公共方法 */
 import { getData } from '@api/getHome'; /**api */
 
-import { Toast, List, Button} from 'antd-mobile';
+import { Toast, List, Button } from 'antd-mobile';
 const Item = List.Item;
 const Brief = Item.Brief;
 
@@ -29,7 +29,6 @@ class Home extends Component {
     }
 
     render() {
-        console.log(pageLists);
         return (
             <div className="Home" ref={this.currRef}>
                 <Button type="primary" onClick={() => { console.log(this.currRef.current) }}>点我</Button>
