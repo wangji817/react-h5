@@ -20,7 +20,7 @@ class Alert extends Component {
     }
     currRef = React.createRef();
     state = {
-        text:`新组件Alert,开发后请删除示例文案`
+        text:`111111111111新组件Alert,开发后请删除示例文案`
     }
     componentDidMount() {
         console.log(this.currRef.current);

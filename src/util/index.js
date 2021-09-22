@@ -65,24 +65,19 @@ vtools.ajaxFlag = !true;/**本地ajax请求开关，为true时会请求本地的
  * @param {object} data 传参数
  * timeFlag 是否需要拼接时间戳，默认true
  */
-vtools.get = (url = "", data = {}, extParam = {}, timeFlag = true) => {
+vtools.get = (url = "", data = { dataType: "json" }, extParam = {}) => {
     if (!url) {
         console.warn('get请求的url不能为空')
         return {};
     }
     return new Promise((resolve, reject) => {
-        timeFlag && (data._t = new Date().getTime());
         axios.get(url, { "params": data }, extParam)
             .then(function (response) {
                 const { data = {}, status = {} } = response;
-                if (data && data.code === 401) {
-                    vtools.goJumpRoute('/login');
+                if (response.status === 200) {
+                    resolve(data, status);
                 } else {
-                    if (response.status === 200) {
-                        resolve(data, status);
-                    } else {
-                        reject(data, status);
-                    }
+                    reject(data, status);
                 }
             })
             .catch(function (error) {
@@ -96,27 +91,19 @@ vtools.get = (url = "", data = {}, extParam = {}, timeFlag = true) => {
  * @param {string} url 需要判断的值
  * @param {object} data 传参数
  */
-vtools.post = (url, data = {}, extParam = {}, timeFlag = true) => {
+vtools.post = (url, data = { dataType: "json" }, extParam = {}) => {
     if (!url) {
         console.warn('post请求的url不能为空')
         return {};
     }
-    if (!data.dataType) {
-        data = qs.stringify(data);//默认为form表单提交，否则设置了dataType才为json
-    }
     return new Promise((resolve, reject) => {
-        timeFlag && (data._t = new Date().getTime());
         axios.post(url, data, extParam)
             .then(function (response) {
                 const { data = {}, status = {} } = response;
-                if (data && data.code === 401) {
-                    vtools.goJumpRoute('/login');
+                if (response.status === 200) {
+                    resolve(data, status);
                 } else {
-                    if (response.status === 200) {
-                        resolve(data, status);
-                    } else {
-                        reject(data, status);
-                    }
+                    reject(data, status);
                 }
             })
             .catch(function (error) {
