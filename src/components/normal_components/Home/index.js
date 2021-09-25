@@ -20,8 +20,8 @@ import pageList from '../../../../config/pageList.js';
 class Home extends Component {
     constructor(props) {
         super(props);
-        this.currRef = React.createRef();
     }
+    currRef = React.createRef();
     state = {
     }
     componentDidMount() {
