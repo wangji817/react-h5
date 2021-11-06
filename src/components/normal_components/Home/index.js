@@ -34,7 +34,7 @@ class Home extends Component {
                 <Button type="primary" onClick={() => { console.log(this.currRef.current) }}>点我</Button>
                 <List renderHeader={() => '当前所有页面'}>
                     {
-                        pageList.map((item, index) => <Item key={`item${index}`} extra="点击跳转" arrow="horizontal" align="middle" onClick={() => (location.href = item.path)} >{item.title}<Brief>{`当前路由地址为:${item.path}`}</Brief></Item>)
+                        pageList.map((item, index) => <Item key={`item${index}`} extra="点击跳转" arrow="horizontal" align="middle" onClick={() => (location.href = item.path)} >{item.title}<Brief>{`当前路由地址为:${item.path.replace("./","/")}`}</Brief></Item>)
                     }
                 </List>
             </div>
